@@ -97,5 +97,30 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+function s {
+    mkdir -p ~/scratch
+    filename="~/scratch/$(date +%Y-%m-%d).$1"
+    touch "$filename"
+    vim "$filename"
+}
+
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+
+alias rm="echo use trash"
+alias R="R --no-save --no-restore"
+
+alias neovim="~/nvim.appimage"
+alias nvim="~/nvim.appimage"
+alias vim="~/nvim.appimage"
+alias vi="~/nvim.appimage"
+alias v="~/nvim.appimage"
+alias r="Rscript"
+alias knit_readme="Rscript -e 'rmarkdown::render(\"README.Rmd\", output_format = \"github_document\")'"
+
+# https://askubuntu.com/questions/1341909/file-browser-and-file-dialogs-take-a-long-time-to-open-or-fail-to-open-in-all-ap
+alias fix_nautilus="pkill gvfsd-trash"
+alias setbg="feh --bg-scale $HOME/Pictures/wallpapers/abstract_3440x1440.png"
+

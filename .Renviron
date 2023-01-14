@@ -1,0 +1,3 @@
+# otherwise nvim-r makes problems in combination with renv
+renv_config_external_libraries="~/r/nvimcomlib"
+_r_check_donttest_examples_ = false

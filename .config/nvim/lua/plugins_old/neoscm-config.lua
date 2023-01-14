@@ -1,0 +1,30 @@
+-- vim.cmd[[setl ep=]]
+-- vim.cmd[[setl inde=scmindent#GetScmIndent(v:lnum)]]
+
+-- if has('nvim')
+--   " if using Neovim, use the indenting function from scmindent.lua
+--   setl ep=
+--   setl inde=scmindent#GetScmIndent(v:lnum)
+-- else
+--   " if using Vim, use scmindent.lua as a filter
+--   if executable('lua')
+--     exec 'setl ep=' . expand('<sfile>:h') . '/../../lua/scmindent.lua'
+--   endif
+-- endif
+--
+-- if empty($NVIM_LISPWORDS)
+--   let $NVIM_LISPWORDS = expand('<sfile>:h') . '/../../customization/nvimlispwords.lua'
+-- endif
+--
+-- if empty($LISPWORDS)
+--   let $LISPWORDS = expand('<sfile>:h') . '/../../customization/.lispwords.lua'
+-- endif
+--
+-- " removing `if` from 'lw' gives it a LIN of -1.
+-- " This gives `if` its statistically most popular indentation.
+--
+-- setl lw-=if
+--
+-- " 'lisp' intereferes with both 'ep' and 'inde', so unset it
+--
+-- setl nolisp

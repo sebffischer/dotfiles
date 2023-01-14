@@ -1,0 +1,338 @@
+-- These mappings are always set:
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+
+vim.keymap.set("n", "<leader>tt", "toggle_float", { desc = "Terminal below" })
+vim.keymap.set("n", "s", "<Nop>")
+-- 	local float = Terminal:new({
+-- 		direction = "float",
+-- 	})
+-- 	return float:toggle()
+-- end
+--
+-- local toggle_below = function()
+-- 	local float = Terminal:new({
+-- 		direction = "horizontal",
+-- 	})
+-- 	return float:toggle()
+-- end
+--
+-- local toggle_lazygit = function()
+-- 	local lazygit = Terminal:new({
+-- 		cmd = "lazygit",
+-- 		direction = "float",
+-- 	})
+-- 	return lazygit:toggle()
+-- end
+--
+--
+--
+-- -- Normal mode keybindings; per default, the leader key set before
+-- local mappings = {
+-- 	q = {
+-- 		name = "Quickfix",
+-- 		q = {
+-- 			"<cmd>copen<cr>",
+-- 			"Open",
+-- 		},
+-- 		n = {
+-- 			"<cmd>cn<cr>",
+-- 			"Next",
+-- 		},
+-- 		p = {
+-- 			"<cmd>cp<cr>",
+-- 			"Previous",
+-- 		},
+-- 		c = {
+-- 			"<cmd>ccl<cr>",
+-- 			"Close",
+-- 		},
+-- 	},
+-- 	Q = {
+-- 		":wq<cr>",
+-- 		"Save & Quit",
+-- 	},
+-- 	w = {
+-- 		":w<cr>",
+-- 		"Save",
+-- 	},
+-- 	x = {
+-- 		":bdelete<cr>",
+-- 		"Close",
+-- 	},
+-- 	u = {
+-- 		"<cmd>noh<cr>",
+-- 		"Unhighlight",
+-- 	},
+-- 	E = {
+-- 		":e ~/.config/nvim/init.lua<cr>",
+-- 		"Edit config",
+-- 	},
+-- 	t = {
+-- 		t = {
+-- 			toggle_below,
+-- 			"Split Below",
+-- 		},
+-- 		f = {
+-- 			toggle_float,
+-- 			"Floating Terminal",
+-- 		},
+-- 		l = {
+-- 			toggle_lazygit,
+-- 			"LazyGit",
+-- 		},
+-- 	},
+-- 	m = {
+-- 		name = "mlr3",
+-- 		f = {
+-- 			name = "Telescope",
+-- 			g = {
+-- 				"<cmd> Telescope live_grep cwd=~/mlr <cr>",
+-- 				"Live Grep",
+-- 			},
+-- 			f = {
+-- 				"<cmd> Telescope find_files cwd=~/mlr <cr>",
+-- 				"Find Files",
+-- 			},
+-- 		},
+-- 	},
+-- 	l = {
+-- 		name = "LSP",
+-- 		i = {
+-- 			"<cmd>LspInfo<cr>",
+-- 			"Connected Language Servers",
+-- 		},
+-- 		k = {
+-- 			"<cmd>lua vim.lsp.buf.signature_help()<cr>",
+-- 			"Signature Help",
+-- 		},
+-- 		K = {
+-- 			"<cmd>Lspsaga hover_doc<cr>",
+-- 			"Hover Commands",
+-- 		},
+-- 		w = {
+-- 			"<cmd>lua vim.lsp.buf.add_workspace_folder()<cr>",
+-- 			"Add Workspace Folder",
+-- 		},
+-- 		W = {
+-- 			"<cmd>lua vim.lsp.buf.remove_workspace_folder()<cr>",
+-- 			"Remove Workspace Folder",
+-- 		},
+-- 		l = {
+-- 			"<cmd>Telescope diagnostics<cr>",
+-- 			"List diagnostics",
+-- 		},
+-- 		f = {
+-- 			"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<cr>",
+-- 			"List Workspace Folders",
+-- 		},
+-- 		t = {
+-- 			"<cmd>lua vim.lsp.buf.type_definition()<cr>",
+-- 			"Type Definition",
+-- 		},
+-- 		d = {
+-- 			"<cmd>lua vim.lsp.buf.definition()<cr>",
+-- 			"Go To Definition",
+-- 		},
+-- 		D = {
+-- 			"<cmd>lua vim.lsp.buf.declaration()<cr>",
+-- 			"Go To Declaration",
+-- 		},
+-- 		r = {
+-- 			"<cmd>lua vim.lsp.buf.references()<cr>",
+-- 			"References",
+-- 		},
+-- 		R = {
+-- 			"<cmd>Lspsaga rename<cr>",
+-- 			"Rename",
+-- 		},
+-- 		a = {
+-- 			"<cmd>Lspsaga code_action<cr>",
+-- 			"Code Action",
+-- 		},
+-- 		e = {
+-- 			"<cmd>Lspsaga show_line_diagnostics<cr>",
+-- 			"Show Line Diagnostics",
+-- 		},
+-- 		n = {
+-- 			"<cmd>Lspsaga diagnostic_jump_next<cr>",
+-- 			"Go To Next Diagnostic",
+-- 		},
+-- 		N = {
+-- 			"<cmd>Lspsaga diagnostic_jump_prev<cr>",
+-- 			"Go To Previous Diagnostic",
+-- 		},
+-- 		s = {
+-- 			"<cmd>ISwap<cr>",
+-- 			"Swap arguments",
+-- 		}, -- not really LSP but fits into the picture
+-- 	},
+-- 	F = {
+-- 		"<cmd>lua vim.lsp.buf.format()<cr>",
+-- 		"Format",
+-- 	},
+-- 	f = {
+-- 		name = "Telescope",
+-- 		b = {
+-- 			"<cmd>Telescope buffers<cr>",
+-- 			"Buffers",
+-- 		},
+-- 		d = {
+-- 			"<cmd>Telescope diagnostics<cr>",
+-- 			"LSP diagnostics",
+-- 		},
+-- 		r = {
+-- 			"<cmd>lua require('telescope.builtin').resume()<cr>",
+-- 			"Resume",
+-- 		},
+-- 		l = {
+-- 			"<cmd> Telescope lsp_dynamic_workspace_symbols<cr>",
+-- 			"Dynamic Workspace Symbols",
+-- 		},
+-- 		t = {
+-- 			"<cmd>lua require('telescope.builtin').treesitter()<cr>",
+-- 			"Treesitter symbols",
+-- 		},
+-- 		f = {
+-- 			"<cmd>lua require('telescope.builtin').find_files()<cr>",
+-- 			"Files",
+-- 		},
+-- 		g = {
+-- 			"<cmd>lua require('telescope.builtin').live_grep()<cr>",
+-- 			"Live grep",
+-- 		},
+-- 		h = {
+-- 			"<cmd>lua require('telescope.builtin').help_tags()<cr>",
+-- 			"Git (H)istory",
+-- 		},
+-- 		s = {
+--       "<cmd> Telescope lsp_document_symbols<cr>",
+--       "Document Symbols (only from open file)"
+-- 		},
+-- 		c = {
+-- 			"<cmd> Telescope find_files cwd=~/.dotfiles <cr>",
+-- 			"Config files ",
+-- 		},
+-- 		n = {
+-- 			"<cmd> Telescope find_files cwd=~/neorg <cr>",
+-- 			"Neorg notes",
+-- 		},
+-- 	},
+--
+-- 	s = {
+-- 		name = "Shoot harpoon",
+-- 		s = {
+-- 			"<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>",
+-- 			"Switch",
+-- 		},
+-- 		m = {
+-- 			"<cmd>lua require('harpoon.mark').add_file()<cr>",
+-- 			"Mark",
+-- 		},
+-- 	},
+--
+-- 	r = {
+-- 		name = "R Keybindings",
+-- 		l = {
+-- 			"<cmd>wa<cr><cmd>RLoadPackage<cr>",
+-- 			"Load R package",
+-- 		},
+-- 		s = {
+-- 			"<cmd>RSetupTest<cr>",
+-- 			"Setup Tests",
+-- 		},
+-- 		d = {
+-- 			"<cmd>RDocumentPackage<cr>",
+-- 			"Document package",
+-- 		},
+-- 		i = {
+-- 			"<cmd>RInstallPackage<cr>",
+-- 			"Install package",
+-- 		},
+-- 		t = {
+-- 			"<cmd>RTestPackage<cr>",
+-- 			"Test package",
+-- 		},
+-- 		c = {
+-- 			"<cmd>RCheckPackage<cr>",
+-- 			"Check package",
+-- 		},
+-- 		m = {
+-- 			':e ./tests/testthat/test_%<cr>itest_that("%:rs works",  {\n\n})',
+-- 			"Make test-file",
+-- 		},
+-- 	},
+--
+-- 	h = {
+-- 		name = "Hop",
+-- 		w = {
+-- 			"<cmd>HopWord<cr>",
+-- 			"Hop to a word",
+-- 		},
+-- 	},
+-- 	a = {
+-- 		"<cmd>NvimTreeToggle<cr>",
+-- 		"File Tree",
+-- 	},
+--
+-- 	g = {
+-- 		name = "Neogit",
+-- 		g = {
+-- 			"<cmd>LazyGit<cr>",
+-- 			"Open",
+-- 		},
+-- 	},
+-- 	c = {
+-- 		name = "create",
+--     t = {
+--       "<cmd>lua create_test()<cr>",
+--       "Create Test"
+--     }
+-- 	},
+-- }
+--
+--
+-- function file_exists(name)
+--    local f = io.open(name, "r")
+--    return f ~= nil and io.close(f)
+-- end
+--
+-- function create_test(name)
+--   local name_provided = name == nil
+--   name = name or vim.fn.expand("%:t")
+--
+--   local wd = vim.fn.getcwd()
+--   local path = wd .. "/tests/testthat/test_" .. name
+--   if (file_exists(path)) then
+--     error("File already exists")
+--   end
+--
+--   if (not string.find(name, "%.R$")) then
+--     if (name_provided) then
+--       print("Adding '.R' extension.")
+--       path = path .. ".R"
+--     else
+--       error("Current file is not an R file.")
+--     end
+--
+--   end
+--
+--   vim.api.nvim_command("e " .. path)
+--
+--   local name_noext = string.gsub(name, "%.R$", "")
+--
+--   vim.api.nvim_buf_set_text(0, 0, 0, 0, 0, {"test_that(\"" .. name_noext ..  " works\", {", "  ", "})"})
+--   vim.cmd("startinsert")
+--   vim.api.nvim_win_set_cursor(0, {2, 3})
+--
+--   return nil
+-- end
+--
+-- wk.register(mappings, {
+-- 	prefix = "<leader>",
+-- 	noremap = true,
+-- 	mode = "n",
+-- })
+--
+-- -- No the visual keybindings
+-- -- local mappings_visual = {u = {"<cmd>noh<cr>", "Unhighlight"}}
+-- -- wk.register(mappings_visual, {prefix = "<leader>", mode = "visual"})
