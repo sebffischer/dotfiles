@@ -124,3 +124,7 @@ alias knit_readme="Rscript -e 'rmarkdown::render(\"README.Rmd\", output_format =
 alias fix_nautilus="pkill gvfsd-trash"
 alias setbg="feh --bg-scale $HOME/Pictures/wallpapers/abstract_3440x1440.png"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
