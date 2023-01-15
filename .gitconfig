@@ -1,0 +1,23 @@
+[credential]
+	helper = cache
+
+[core]
+  filemode = false # https://stackoverflow.com/questions/1257592/how-do-i-remove-files-saying-old-mode-100755-new-mode-100644-from-unstaged-cha
+  pager = delta
+
+[commit]
+    template = ~/.config/git/commit.template
+
+[delta]
+    side-by-side = true
+
+[user]
+	email = sebf.fischer@gmail.com
+	name = Sebastian Fischer
+[core]
+	editor = /home/sebi/nvim.appimage
+[init]
+	defaultBranch = main
+
+
+
