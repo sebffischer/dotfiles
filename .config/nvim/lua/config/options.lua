@@ -116,7 +116,7 @@ opt.mouse = "a"
 opt.encoding = "utf-8"
 
 -- localization
-opt.spelllang = "en,de"
+opt.spelllang = "en"
 opt.spellsuggest = "fast,20"
 
 -- completion
