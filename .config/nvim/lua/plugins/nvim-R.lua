@@ -35,7 +35,6 @@ end
 
 return {
 	"jalvesaq/Nvim-R",
-	cmd = { "<leader>rr" },
 	branch = "stable",
 	dependencies = { "mllg/vim-devtools-plugin" },
 	keys = {

@@ -7,6 +7,3 @@ To create the symlinks, run the following command:
 ```{sh}
 make stow
 ```
-
-
-
