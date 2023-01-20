@@ -4,12 +4,14 @@ return {
 		opts = {
 			ensure_installed = {
 				"bash",
-				"help",
+				"c",
+				"comment", -- This colorizes roxygen tags like "@description"
 				"html",
 				"json",
 				"lua",
 				"markdown",
 				"markdown_inline",
+				"help",
 				"python",
 				"query",
 				"regex",
@@ -23,6 +25,8 @@ return {
 			highlight = {
 				enable = true,
 			},
+			indent = { enable = false },
+			rainbow = { enable = true },
 		},
 	},
 }

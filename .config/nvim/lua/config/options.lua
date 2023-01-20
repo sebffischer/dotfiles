@@ -1,6 +1,8 @@
 local opt = vim.opt
 local g = vim.g
 
+g.maplocalleader = "\\"
+
 -- sources:
 -- https://github.com/tjdevries/config_manager/blob/master/xdg_config/nvim/plugin/options.lua
 -- https://github.com/mllg/dotfiles/blob/master/.config/nvim/lua/options.lua
@@ -54,24 +56,6 @@ vim.cmd([[hi! Cursor guifg=NONE guibg=#ebdbb2 gui=NONE cterm=NONE]])
 vim.cmd([[let g:mkdp_auto_start = 0]])
 vim.cmd([[let g:mkdp_browser = 'firefox']])
 vim.cmd([[let g:mkdp_echo_preview_url = 1]])
-
--- R options
-g.R_nvim_wd = -1
-g.R_assign = 0
-g.R_nvimpager = "horizontal"
-g.rout_follow_colorscheme = 1 -- this is not really working with radian
-g.R_openpdf = 0
-g.R_openhtml = 0
--- g.R_nvim_wd = -1
-
-g.R_bracketed_paste = 1
--- vim.g.R_app = "radian"
--- vim.g.R_app = "/home/sebi/miniconda3/envs/yahpo_gym/bin/radian"
--- vim.g.R_bracketed_paste = 1
-vim.g.R_cmd = "R"
-vim.g.R_hl_term = 0
-vim.g.r_indent_align_args = 0
-vim.g.R_args = {}
 
 -- Indentiation
 opt.cindent = true -- use C indenting rules (better than autoindent the docs suggests)
@@ -129,4 +113,23 @@ vim.g.indent_blankline_filetype_exclude = {
 	"NvimTree",
 }
 
-vim.cmd([[let cmdline_map_send = '<A-r>']])
+-- vim.cmd([[let cmdline_map_send = '<A-r>']])
+
+g = vim.g
+g.R_bracketed_paste = 1
+-- vim.g.R_app = "radian"
+-- vim.g.R_app = "/home/sebi/miniconda3/envs/yahpo_gym/bin/radian"
+-- vim.g.R_bracketed_paste = 1
+vim.g.R_cmd = "R"
+vim.g.R_hl_term = 0
+vim.g.r_indent_align_args = 0
+vim.g.R_args = {}
+
+-- R options
+g.R_nvim_wd = -1
+g.R_assign = 0
+g.R_nvimpager = "horizontal"
+g.rout_follow_colorscheme = 1 -- this is not really working with radian
+g.R_openpdf = 0
+g.R_openhtml = 0
+-- g.R_nvim_wd = -1

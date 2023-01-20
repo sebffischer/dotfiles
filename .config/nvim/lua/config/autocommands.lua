@@ -1,9 +1,0 @@
--- use markdown syntax for quarto
--- group = vim.api.nvim_create_augroup('QuartoFileType', { clear = true })
--- vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
---     group = group,
---     pattern = '*.qmd',
---     callback = function()
---         vim.bo.filetype = 'markdown'
---     end,
--- })

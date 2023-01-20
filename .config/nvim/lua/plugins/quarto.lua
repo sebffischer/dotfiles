@@ -5,7 +5,7 @@ return {
 		"neovim/nvim-lspconfig",
 	},
 	ft = "quarto",
-	config = function()
+	config = function(_, opts)
 		require("quarto").setup({
 			lspFeatures = {
 				enabled = true,

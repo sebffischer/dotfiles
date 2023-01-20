@@ -10,6 +10,7 @@ return {
 			remark_ls = {},
 			ltex = {},
 			sumneko_lua = {},
+			clangd = {},
 		},
 	},
 }
