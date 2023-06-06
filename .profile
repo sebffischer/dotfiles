@@ -47,7 +47,7 @@ PATH=$PATH:/home/sebi/.local/share/nvim/lsp_servers/sumneko_lua/extension/server
 PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:/home/sebi/.cargo/bin
 PATH=$PATH:/home/sebi/.config/i3/
-PATH=$PATH:/usr/local/texlive/2022/bin/x86_64-linux
+PATH=$PATH:/usr/local/texlive/2023/bin/x86_64-linux
 PATH=$PATH:/home/sebi/.rbenv/bin/
 
 # # >>> conda initialize >>>

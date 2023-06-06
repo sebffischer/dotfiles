@@ -172,3 +172,7 @@ setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'
 
 eval "$(starship init bash)"
+
+export PATH=$PATH:~/bin
+
+

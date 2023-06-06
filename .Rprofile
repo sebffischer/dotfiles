@@ -1,6 +1,18 @@
+g = function() {
+  debugadapter::run()
+  options(debugadapter.log = 2)
+}
+
+# Martins setting's
+Sys.setenv(OMP_NUM_THREADS = 1)
+Sys.setenv(OMP_THREAD_LIMIT = 1)
+try(data.table::setDTthreads(1))
+try(RhpcBLASctl::blas_set_num_threads(1))
+try(RhpcBLASctl::omp_set_num_threads(1))
+
 if (interactive()) {
   r = function() startup::restart()
-  require(colorout)
+  # require(colorout)
 }
 
 # manage libraries.
@@ -9,10 +21,9 @@ if (!dir.exists(Sys.getenv("R_LIBS_USER"))) {
 }
 .libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
 
-options(repos = "https://ftp.fau.de/cran/")
-options(radian.color_scheme = "monokai")
-
 options(
+  repos = "https://ftp.fau.de/cran/",
+  radian.color_scheme = "monokai",
   usethis.full_name = "Sebastian Fischer",
   usethis.description = list(
     `Authors@R` = 'person("Sebastian", "Fischer", email = "sebf.fischer@gmail.com", role = c("aut", "cre"),

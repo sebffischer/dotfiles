@@ -17,14 +17,22 @@ return {
 		"kdheepak/lazygit.nvim",
 		"nvim-telescope/telescope-live-grep-raw.nvim",
 	},
-	keys = {
-		{ "<leader>fr", "<cmd>lua require('telescope.builtin').resume()<cr>", { desc = "Resume" } },
-		{ "<leader>mff", "<cmd> Telescope find_files cwd=~/mlr <cr>", { desc = "Search mlr3 files" } },
-		{ "<leader>mfg", "<cmd> Telescope live_grep cwd=~/mlr <cr>", { desc = "Grep mlr3 files" } },
-		{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "LSP diagnostics" } },
-		{ "<leader>fl", "<cmd> Telescope lsp_dynamic_workspace_symbols<cr>", { desc = "Dynamic Workspace Symbols" } },
-		{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Files" } },
-		{ "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Live grep" } },
-		{ "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { desc = "Git (H)istory" } },
-	},
+	keys = function()
+        -- This replaces the existing keybindings
+		return {
+			{ "<leader>/", false },
+			{ "<leader>fr", "<cmd>lua require('telescope.builtin').resume()<cr>", { desc = "Resume" } },
+			{ "<leader>mff", "<cmd> Telescope find_files cwd=~/mlr <cr>", { desc = "Search mlr3 files" } },
+			{ "<leader>mfg", "<cmd> Telescope live_grep cwd=~/mlr <cr>", { desc = "Grep mlr3 files" } },
+			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", { desc = "LSP diagnostics" } },
+			{
+				"<leader>fl",
+				"<cmd> Telescope lsp_dynamic_workspace_symbols<cr>",
+				{ desc = "Dynamic Workspace Symbols" },
+			},
+			{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Files" } },
+			{ "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Live grep" } },
+			{ "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>", { desc = "Git (H)istory" } },
+		}
+	end,
 }

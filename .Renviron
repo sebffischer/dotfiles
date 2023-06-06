@@ -1,3 +1,13 @@
 # otherwise nvim-r makes problems in combination with renv
-renv_config_external_libraries="~/r/nvimcomlib"
-_r_check_donttest_examples_ = false
+RENV_CONFIG_EXTERNAL_LIBRARIES="~/.nvimcom/"
+_R_CHECK_DONTTEST_EXAMPLES_ = false
+
+
+
+# https://github.com/jalvesaq/Nvim-R/issues/445
+# Here we avoid that we forget to update the R version
+# TODO: 1. Get nvimcom R version using `readline ~/.nvimcom/nvimcom`
+# Compare it with the installed R version
+# Then throw a warning
+# Also make a command that automatically updates the symlink
+#

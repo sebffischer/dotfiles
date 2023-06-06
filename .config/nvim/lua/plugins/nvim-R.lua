@@ -3,7 +3,7 @@ local function file_exists(name)
 	return f ~= nil and io.close(f)
 end
 
-local function create_test(name)
+function create_test(name)
 	local name_provided = name == nil
 	name = name or vim.fn.expand("%:t")
 
@@ -36,14 +36,16 @@ end
 return {
 	"jalvesaq/Nvim-R",
 	branch = "stable",
+    ft = {"r", "rmd", "quarto"},
 	dependencies = { "mllg/vim-devtools-plugin" },
 	keys = {
 		{ "<leader>rs", "<cmd>RSetupTest<cr>", desc = "Setup Test" },
-		{ "<leader>rr", "<Plug>RStart", desc = "Run R" },
+		{ "<leader>rr", "<Plug>RStart<cr>", desc = "Run R" },
 		{ "<leader>rl", "<cmd>wa<cr><cmd>RLoadPackage<cr>", desc = "Load R package" },
 		{ "<leader>rd", "<cmd>RDocumentPackage<cr>", desc = "Document package" },
 		{ "<leader>ri", "<cmd>RInstallPackage<cr>", desc = "Install package" },
-		{ "<leader>rt", "<cmd>RTestPackage<cr>", "Test package" },
+		{ "<leader>rw", "<cmd>RSend traceback()<cr>", desc = "Look at traceback" },
+		{ "<leader>rt", "<cmd>RTestPackage<cr>", desc = "Test package" },
 		{ "<leader>rc", "<cmd>RCheckPackage<cr>", desc = "Check package" },
 		{ "<leader>re", "<cmd>lua create_test()<cr>", "Edit (or create) Test File" },
 		{ "<A-p>", "%>>%", mode = "i" },
