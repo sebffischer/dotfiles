@@ -2,6 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 path+=('/home/sebi/.local/share/applications')
+path+=('/home/sebi/bin')
 
 ZSH_THEME="robbyrussell"
 # Uncomment the following line to use case-sensitive completion.
@@ -96,13 +97,12 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 
 alias ipy="ipython"
-alias rm="echo use trash"
 alias R="R --no-save --no-restore"
 alias killr="pkill -f exec/R"
 
 # alias neovim="~/nvim.appimage"
 # alias nvim="~/nvim.appimage"
-alias v="~/appimages/nvim.appimage"
+alias v="~/nvim.appimage"
 alias r="Rscript"
 alias knit_readme="Rscript -e 'rmarkdown::render(\"README.Rmd\", output_format = \"github_document\")'"
 

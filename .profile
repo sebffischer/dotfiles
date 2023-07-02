@@ -66,3 +66,7 @@ then
 else
     echo "File .secrets not found in home directory."
 fi
+
+export PATH=$PATH:~/bin
+
+
