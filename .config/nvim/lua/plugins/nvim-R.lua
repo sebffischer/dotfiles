@@ -49,7 +49,7 @@ return {
 		{ "<leader>rc", "<cmd>RCheckPackage<cr>", desc = "Check package" },
 		{ "<leader>re", "<cmd>lua create_test()<cr>", "Edit (or create) Test File" },
 		{ "<A-p>", "%>>%", mode = "i" },
-		{ "<A-r>", "<Plug>RDSendLine" },
+		{ "<C-Enter>", "<Plug>RDSendLine" },
 		{ "<A-r>", "<Plug>RDSendSelection", mode = "v" },
 	},
 }
