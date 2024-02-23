@@ -1,6 +1,5 @@
 # otherwise nvim-r makes problems in combination with renv
 RENV_CONFIG_EXTERNAL_LIBRARIES="~/.nvimcom/"
-GITHUB_PAT="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"
 _R_CHECK_DONTTEST_EXAMPLES_ = false
 
 
