@@ -1,10 +1,4 @@
-g = function() {
-  debugadapter::run()
-  options(debugadapter.log = 2)
-}
-
 options(repos = c(
-  mlrorg = "https://mlr-org.r-universe.dev",
   CRAN = "https://ftp.fau.de/cran/"
 ))
 
@@ -31,7 +25,8 @@ if (!dir.exists(Sys.getenv("R_LIBS_USER"))) {
 .libPaths(Sys.getenv("R_LIBS_USER"))  # add to the path
 
 options(
-  radian.color_scheme = "monokai",
+  mlr3torch.cache = TRUE,
+  radian.color_scheme = "native",
   usethis.full_name = "Sebastian Fischer",
   usethis.description = list(
     `Authors@R` = 'person("Sebastian", "Fischer", email = "sebf.fischer@gmail.com", role = c("aut", "cre"),
@@ -45,27 +40,9 @@ options(
 
   # Require to upload to OpenML
   languageserver.formatting_style = function(options) styler.mlr::mlr_style(),
-  #
+
   # Better printing of datatables
   datatable.print.class = TRUE,
   datatable.print.keys = TRUE,
-  mlr3oml.cache = TRUE,
-  wbo.path = "/home/sebi/r/weighted-bo/experiments"
+  mlr3oml.cache = TRUE
 )
-# public_server()
-if (!exists("use_test_server")) {
-  use_test_server = function() {
-    options(
-      mlr3oml.api_key = Sys.getenv("TESTOPENMLAPIKEY"),
-      mlr3oml.server = "https://test.openml.org/api/v1"
-    )
-  }
-}
-if (!exists("use_public_server")) {
-  use_public_server = function() {
-    options(
-      mlr3oml.api_key = Sys.getenv("OPENMLAPIKEY"),
-      mlr3oml.server = "https://www.openml.org/api/v1"
-    )
-  }
-}

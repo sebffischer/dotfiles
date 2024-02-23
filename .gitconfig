@@ -15,7 +15,7 @@
 	email = sebf.fischer@gmail.com
 	name = "Sebastian Fischer"
 [core]
-	editor = /home/sebi/appimages/nvim.appimage
+	editor = nvim
 [init]
 	defaultBranch = main
 

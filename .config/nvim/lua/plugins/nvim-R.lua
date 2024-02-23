@@ -33,6 +33,13 @@ function create_test(name)
 	return nil
 end
 
+
+vim.g.R_app = "R"
+vim.g.R_cmd = "R"
+vim.g.R_hl_term = 0
+vim.g.R_args = {}  -- if you had set any
+vim.g.R_bracketed_paste = 0
+
 return {
 	"jalvesaq/Nvim-R",
 	branch = "stable",
@@ -49,7 +56,7 @@ return {
 		{ "<leader>rc", "<cmd>RCheckPackage<cr>", desc = "Check package" },
 		{ "<leader>re", "<cmd>lua create_test()<cr>", "Edit (or create) Test File" },
 		{ "<A-p>", "%>>%", mode = "i" },
-		{ "<C-Enter>", "<Plug>RDSendLine" },
+		{ "<c-enter>", "<Plug>RDSendLine" },
 		{ "<A-r>", "<Plug>RDSendSelection", mode = "v" },
 	},
 }

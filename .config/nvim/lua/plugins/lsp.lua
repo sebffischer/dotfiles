@@ -12,6 +12,7 @@ return {
             -- ltex = {},
             sumneko_lua = {},
             clangd = {},
+            rust_analyzer = {},
         }
     },
     keys = {

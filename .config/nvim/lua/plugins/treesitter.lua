@@ -11,7 +11,7 @@ return {
 				"lua",
 				"markdown",
 				"markdown_inline",
-				"help",
+				"vimdoc",
 				"python",
 				"query",
 				"regex",

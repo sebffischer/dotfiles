@@ -26,6 +26,8 @@ map ctrl+y change_font_size all +2.0
 map ctrl+shift+- change_font_size all -2.0
 
 # BEGIN_KITTY_THEME
-# My Tokyo Day
+# My Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
+font_family Fira Code
+
