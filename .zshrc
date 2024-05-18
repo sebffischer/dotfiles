@@ -231,6 +231,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
 	source $ZSH/oh-my-zsh.sh
 
+
+	alias knit_readme="Rscript -e 'rmarkdown::render(\"README.Rmd\", output_format = \"github_document\")'"
 	# User configuration
 
 	# export MANPATH="/usr/local/man:$MANPATH"
@@ -272,6 +274,12 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	    kitty +kitten themes --reload-in=all My Tokyo Day
 	    export BAT_THEME="OneHalfLight"
 	}
+	function dark {
+	    kitty +kitten themes --reload-in=all My Tokyo Night
+	    export BAT_THEME="OneHalfDark"
+	}
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+    export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
 fi
 
 

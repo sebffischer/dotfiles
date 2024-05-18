@@ -1,5 +1,6 @@
 vim.keymap.set("n", "<leader>tt", "toggle_float", { desc = "Terminal below" })
 vim.keymap.set("n", "s", "<Nop>")
+vim.keymap.set("n", "s", "<Nop>")
 
 vim.keymap.set({ "v", "n", "s" }, "<C-s>", "<cmd>noa w<cr><esc>", { desc = "Save file wo formatting" })
 vim.keymap.set({ "v", "n", "s" }, "<space>r", "<Plug>RStart")

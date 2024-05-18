@@ -5,13 +5,6 @@ options(repos = c(
 # Martins setting's
 Sys.setenv(OMP_NUM_THREADS = 1)
 Sys.setenv(OMP_THREAD_LIMIT = 1)
-if (require("data.table", quietly = TRUE)) {
-  data.table::setDTthreads(1)
-}
-if (require("RhpcBLASctl", quietly = TRUE)) {
-  RhpcBLASctl::blas_set_num_threads(1)
-  RhpcBLASctl::omp_set_num_threads(1)
-}
 
 if (interactive()) {
   r = function() startup::restart()

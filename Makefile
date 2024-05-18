@@ -1,2 +1,2 @@
 stow:
-	stow -v -t ~ .
+	stow -v -t ~ . --ignore='\.DS_Store' .
