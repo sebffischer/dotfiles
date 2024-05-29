@@ -278,8 +278,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 	    kitty +kitten themes --reload-in=all My Tokyo Night
 	    export BAT_THEME="OneHalfDark"
 	}
-    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-    export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+  export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
 fi
 
 
