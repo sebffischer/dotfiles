@@ -16,8 +16,12 @@ hidden = false
 display-inlay-hints = true
 display-messages = true
 
-[keys.insert]
-j = { j = "normal_mode" } # Maps `jk` to exit insert mode
+# [keys.insert]
+# j = { j = "normal_mode" } # Maps `jj`
+
+[keys.normal]
+"A-1" = "copy_selection_on_prev_line" 
+space = {t = ":toggle lsp.display-inlay-hints"}
 
 [editor.indent-guides]
 render = true

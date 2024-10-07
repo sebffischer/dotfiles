@@ -13,3 +13,6 @@ completion = [{ name = "binary", completion = "filename" }]
 args = { program = "{0}", initCommands = [
     "command script import /usr/local/etc/lldb_vscode_rustc_primer.py",
 ] }
+
+[language-server.typos]
+command = "typos-lsp"

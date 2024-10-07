@@ -3,8 +3,10 @@ options(repos = c(
 ))
 
 # Martins setting's
-Sys.setenv(OMP_NUM_THREADS = 1)
-Sys.setenv(OMP_THREAD_LIMIT = 1)
+Sys.setenv(
+  OMP_NUM_THREADS = 1,
+  OMP_THREAD_LIMIT = 1
+)
 
 if (interactive()) {
   r = function() startup::restart()
@@ -37,5 +39,6 @@ options(
   # Better printing of datatables
   datatable.print.class = TRUE,
   datatable.print.keys = TRUE,
-  mlr3oml.cache = TRUE
+  mlr3oml.cache = TRUE,
+  help_type = "html"
 )
